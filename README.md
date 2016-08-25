@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/sbakiu/Allianz.svg?branch=development)](https://travis-ci.org/sbakiu/Allianz)
 # Allianz - Docker orchestration, service discovery, Vagrant
 
 Create a small web application which on request retrieves several rows of data from the database of your choice.
