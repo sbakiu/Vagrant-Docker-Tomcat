@@ -1,4 +1,5 @@
 {
+  "before_install": "cd simpleproject",
   "language": "java",
   "jdk": "oraclejdk7",
   "script": "mvn install -DskipTests=true"
