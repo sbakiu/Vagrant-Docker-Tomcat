@@ -18,5 +18,5 @@ USE allianz;
 -- Dumping data for table students
 --
 
-INSERT IGNORE INTO students (enrolment_number, name, surname) VALUES(1, 'Sadik', 'Bakiu');
-INSERT IGNORE INTO students (enrolment_number, name, surname) VALUES(2, 'Sadik', 'Bakiu');
+INSERT INTO students (enrolment_number, name, surname) VALUES(1, 'Sadik', 'Bakiu');
+INSERT INTO students (enrolment_number, name, surname) VALUES(2, 'Sadik', 'Bakiu');
