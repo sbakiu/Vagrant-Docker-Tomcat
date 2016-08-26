@@ -1,20 +1,19 @@
 package com.allianz.simpleproject.service;
 
-import java.sql.Connection;
-import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.allianz.simpleproject.db.DBConnection;
 import com.allianz.simpleproject.entities.Student;
 import com.allianz.simpleproject.manager.StudentManager;
 
+import com.google.gson.Gson;
 /**
  * RestFUL Service to manage a simple Students service.
  * 
@@ -24,6 +23,7 @@ import com.allianz.simpleproject.manager.StudentManager;
 
 @Path("StudentService")
 public class StudentService {
+	@Context ServletContext context;
 
 	@GET
 	public String sayPlainTextHello() {
@@ -37,10 +37,13 @@ public class StudentService {
 		List<Student> students = null;
 		StudentManager manager = new StudentManager();
 		students = manager.getStudents();
+		
+		Gson gson = new Gson();
+		
 		if (students == null)
 			return Response.ok("No entiries available").build();
-		GenericEntity<List<Student>> entity = new GenericEntity<List<Student>>(students) {};
-		return Response.ok(entity).build();
+		
+		return Response.ok(gson.toJson(students)).build();
 	}
 
 	/*
