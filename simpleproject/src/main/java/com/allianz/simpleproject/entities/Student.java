@@ -1,23 +1,23 @@
 package com.allianz.simpleproject.entities;
 
 public class Student {
-	private int matriculation;
+	private int enrolmentNumber;
 	private String name;
 	private String surname;
 	
 	
-	public Student(int matriculation, String name, String surname) {
-		this.matriculation = matriculation;
+	public Student(int enrolmentNumber, String name, String surname) {
+		this.enrolmentNumber = enrolmentNumber;
 		this.name = name;
 		this.surname = surname;
 	}
 
-	public int getMatriculation() {
-		return matriculation;
+	public int getEnrolmentNumber() {
+		return enrolmentNumber;
 	}
 	
-	public void setMatriculation(int matriculation) {
-		this.matriculation = matriculation;
+	public void setMatriculation(int enrolmentNumber) {
+		this.enrolmentNumber = enrolmentNumber;
 	}
 	
 	public String getName() {
