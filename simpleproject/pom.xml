@@ -1,20 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<properties>
-		<project.build.directory>simpleproject/target</project.build.directory>
-		<project.artifactId>simpleproject</project.artifactId>
-		<project.version>0.0.1-SNAPSHOT</project.version>
-		<!-- <project.basedir></project.basedir> -->
-	</properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.allianz</groupId>
-	<artifactId>${project.artifactId}</artifactId>
+	<artifactId>simpleproject</artifactId>
 	<packaging>war</packaging>
-	<version>${project.version}</version>
-	<name>simpleproject</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>SimpleProject</name>
 	<url>http://maven.apache.org</url>
-
 	<build>
+		<finalName>simpleproject</finalName>
 		<!-- <sourceDirectory>src</sourceDirectory> -->
 		<plugins>
 			<plugin>
@@ -101,11 +95,8 @@
 			<version>2.23.2</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
-	<!-- 	<dependency>
-			<groupId>javax.ws.rs</groupId>
-			<artifactId>javax.ws.rs-api</artifactId>
-			<version>2.0.1</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>javax.ws.rs</groupId> <artifactId>javax.ws.rs-api</artifactId> 
+			<version>2.0.1</version> </dependency> -->
 		<dependency>
 			<groupId>org.glassfish.jersey.bundles</groupId>
 			<artifactId>jaxrs-ri</artifactId>
@@ -125,7 +116,21 @@
 			<artifactId>javax.ws.rs-api</artifactId>
 			<version>2.0.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
 
 	</dependencies>
+
+
 </project>
