@@ -9,3 +9,6 @@ Web application and database should run on different virtual nodes, configured b
 
 ## Run
 ```vagrant up --no-parallel```
+
+## GET Request
+```cURL http://localhost:8888/simpleproject/rest/StudentService/students```
