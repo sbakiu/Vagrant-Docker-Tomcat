@@ -1,16 +1,18 @@
 --- 
-application: 
-  app_database: allianz
-  app_password: allianz
-  app_user_name: allianz
 db: 
-  db_name: MYSQL_DATABASE=allianz
-  db_password: MYSQL_PASSWORD=allianz
-  db_user_name: MYSQL_USER=allianz
-  root_password: MYSQL_ROOT_PASSWORD=root
+  db_name: allianz
+  db_password: allianz
+  db_user_name: allianz
+  root_password: root
+mysql: 
+  db_name: MYSQL_DATABASE
+  db_password: MYSQL_PASSWORD
+  db_user_name: MYSQL_USER
+  root_password: MYSQL_ROOT_PASSWORD
 port: 
   mysql_port: 3306
   tomcat_port: 8888
-  forwarded_port: 2201
 vagrant: 
+  api_version: 2
+  default_provider: docker
   machine_name: dockerHostVM
