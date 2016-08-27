@@ -20,5 +20,4 @@ RUN sed -i "s#PORT#${PORT}#g" ${CONFIG_FILE_PATH} && \
 	sed -i "s#USERNAME#${USERNAME}#g" ${CONFIG_FILE_PATH} && \
 	sed -i "s#PASSWORD#${PASSWORD}#g" ${CONFIG_FILE_PATH}
 
-
 CMD ["catalina.sh", "run"]
