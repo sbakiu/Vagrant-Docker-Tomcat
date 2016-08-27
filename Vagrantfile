@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
 config.vm.network "forwarded_port", guest: "#{tomcat_port}", host: "#{forwarded_port}", auto_correct: true
 # Configure VM Ram usage
 config.vm.provider :virtualbox do |vb|
-  vb.customize ["modifyvm", :id, "--memory", "1024"]
+  vb.customize "pre-boot", ["modifyvm", :id, "--resize", "2048"]
 end
 #1. Data container
 config.vm.define "dataContainer" do |data|
@@ -46,7 +46,7 @@ config.vm.define "dataContainer" do |data|
 	end
 end
 #2. MySQL container
-config.vm.define "mysqlContainer" do |mysql|
+config.vm.define "mysqlContainer" do |mysql|	
 	mysql.vm.provider :docker do |d|
 		d.name = 'mysqlContainer'
 		d.build_dir = "makemysql"

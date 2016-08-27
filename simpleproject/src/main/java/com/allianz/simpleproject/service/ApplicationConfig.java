@@ -20,7 +20,6 @@ public class ApplicationConfig extends Application{
 	        try {
 	            properties.load(inputStream);
 	        } catch (IOException e) {
-	            // TODO Add your custom fail-over code here
 	            e.printStackTrace();
 	        }
 	    }
