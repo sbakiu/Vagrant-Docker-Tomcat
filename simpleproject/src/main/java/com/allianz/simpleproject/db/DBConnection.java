@@ -8,9 +8,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.allianz.simpleproject.dao.StudentDao;
 import com.allianz.simpleproject.service.ApplicationConfig;
 
 public class DBConnection {
+	private static Logger logger = LogManager.getLogger(DBConnection.class);
+	
 	static private DBConnection _instance = null;
 	static private Connection connection = null;
 	static public String driver = null;
@@ -22,8 +28,9 @@ public class DBConnection {
 	static public String url = null;
 
 	protected DBConnection() {
+		
 		try {
-
+			
 			driver = ApplicationConfig.properties.getProperty("jdbc.driverClassName");
 			host = ApplicationConfig.properties.getProperty("jdbc.host");
 			port = ApplicationConfig.properties.getProperty("jdbc.port");
@@ -39,10 +46,9 @@ public class DBConnection {
 
 		} catch (SQLException ex) {
 		    // handle any errors
-		    System.out.println("SQLException: " + ex.getMessage());
-		    System.out.println("SQLState: " + ex.getSQLState());
-		    System.out.println("VendorError: " + ex.getErrorCode());
+			logger.error(ex, ex.getCause());
 		} catch (Exception e) {
+			logger.error(e, e.getCause());
 			System.out.println("error" + e);
 		}
 	}
