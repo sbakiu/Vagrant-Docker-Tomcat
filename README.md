@@ -10,7 +10,7 @@ Web application and database should run on different virtual nodes, configured b
 ## Architecture
 ![Architecture of the tool](architecture/Architecture.jpg?raw=true "Architecture of the developed tool")
 
-Initially a virtual machine is create on VirtualBox, dockerHostVM. On top of this VM there are built three docker containers:
+Initially a virtual machine is create on VirtualBox, dockerHostVM. On top of this VM, three docker containers are built:
 * __dataContainer__ used to store the data for the database and logs for the application
 * __mysqlContainer__ used for the MySQL installation
 * __applicationContainer__ used for hosting the application
