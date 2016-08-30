@@ -24,11 +24,11 @@ Service discovery is performed with simple docker links.
 ```cURL http://localhost:8888/simpleproject/rest/StudentService/students```
 
 ## Tools used
-* Vagrant 1.8.5
-* Docker 1.12
-* Tomcat 8
-* Java 8
-* MySQL 5.7
+* [Vagrant 1.8.5](https://www.vagrantup.com/) 
+* [Docker 1.12](https://www.docker.com/)
+* [Tomcat 8](https://tomcat.apache.org/)
+* [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [MySQL 5.7](http://dev.mysql.com/downloads/)
 
 
 
