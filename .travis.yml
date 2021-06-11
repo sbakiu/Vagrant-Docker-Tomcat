@@ -1,9 +1,0 @@
-  before_install: 
-    - cd simpleproject
-  language: java
-  jdk: oraclejdk7
-  script: mvn install -DskipTests=true
-  notifications:
-  slack:
-    on_success: never
-    on_failure: always
